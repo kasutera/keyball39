@@ -22,7 +22,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  // keymap for default (VIA)
   [0] = LAYOUT_right_ball(
     KC_Q                , KC_W      , KC_E                  , KC_R          , KC_T              ,                                         KC_Y          , KC_U    , KC_I    , KC_O    , LT(2,KC_P)              ,
     MT(MOD_LCTL,KC_A)   , KC_S      , MT(MOD_LGUI,KC_D)     , LT(2,KC_F)    , KC_G              ,                                         KC_H          , KC_J    , KC_K    , KC_L    , S(KC_SCLN)              ,
@@ -38,10 +37,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [2] = LAYOUT_right_ball(
-    _______ , KC_BRMD   , KC_BRMU   , _______   , KC_PGUP   ,                         _______   , G(KC_LBRC), KC_MINUS    , G(KC_RBRC)  , KC_ESC    ,
-    _______ , KC_VOLD   , KC_VOLU   , KC_MUTE   , KC_PGDN   ,                         KC_BSPC   , KC_BTN1   , KC_BTN3     , KC_BTN2     , _______   ,
-    _______ , _______   , _______   , _______   , _______   ,                         _______   , KC_ENT    , C(KC_LEFT)  , C(KC_RGHT)  , _______   ,
-    _______ , _______   , _______   , _______   , _______   , _______   , _______   , _______   ,                                         _______
+    _______ , KC_BRMD           , KC_BRMU           , _______       , KC_PGUP   ,                         _______   , G(KC_LBRC), KC_MINUS    , G(KC_RBRC)  , KC_ESC    ,
+    _______ , KC_KB_VOLUME_DOWN , KC_KB_VOLUME_UP   , KC_KB_MUTE    , KC_PGDN   ,                         KC_BSPC   , KC_BTN1   , KC_BTN3     , KC_BTN2     , _______   ,
+    _______ , _______           , _______           , _______       , _______   ,                         _______   , KC_ENT    , C(KC_LEFT)  , C(KC_RGHT)  , _______   ,
+    _______ , _______           , _______           , _______       , _______   , _______   , _______   , _______   ,                                         _______
   ),
 
   [3] = LAYOUT_right_ball(
