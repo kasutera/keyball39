@@ -23,51 +23,35 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_right_ball(
-    KC_Q                , KC_W      , KC_E                  , KC_R          , KC_T              ,                                         KC_Y          , KC_U    , KC_I    , KC_O    , LT(2,KC_P)              ,
-    MT(MOD_LCTL,KC_A)   , KC_S      , MT(MOD_LGUI,KC_D)     , LT(2,KC_F)    , KC_G              ,                                         KC_H          , KC_J    , KC_K    , KC_L    , S(KC_SCLN)              ,
-    MT(MOD_LSFT,KC_Z)   , KC_X      , KC_C                  , KC_V          , KC_B              ,                                         KC_N          , KC_M    , KC_COMM , KC_DOT  , MT(MOD_RSFT,KC_SLSH)    ,
-    KC_LCTL             , KC_LALT   , MT(MOD_LGUI,KC_MINS)  , LT(2,KC_LNG2) ,MT(MOD_LGUI,KC_SPC), MT(MOD_LCTL,KC_TAB)   , LT(3,KC_LNG1) , LT(1,KC_ESC)  ,                               KC_RSFT
+    KC_Q                , KC_W      , KC_E                  , KC_R          , KC_T              ,                             KC_Y          , KC_U    , KC_I    , KC_O    , KC_P                    ,
+    MT(MOD_LCTL,KC_A)   , KC_S      , MT(MOD_LGUI,KC_D)     , LT(2,KC_F)    , KC_G              ,                             KC_H          , KC_J    , KC_K    , KC_L    , S(KC_SCLN)              ,
+    MT(MOD_LSFT,KC_Z)   , KC_X      , KC_C                  , KC_V          , KC_B              ,                             KC_N          , KC_M    , KC_COMM , KC_DOT  , MT(MOD_RSFT,KC_SLSH)    ,
+    MT(MOD_LALT,KC_LNG2), KC_LCTL   , MT(MOD_LCTL,KC_MINS)  , LT(2,KC_ESC)  ,MT(MOD_LGUI,KC_SPC), KC_TAB    , LT(3,KC_BSPC) , LT(1,KC_ENT)  ,                               MT(MOD_RSFT,KC_LNG1)
   ),
 
   [1] = LAYOUT_right_ball(
-    S(KC_1)             , S(KC_2)   , S(KC_3)   , S(KC_4)   , S(KC_5)   ,                         S(KC_6)   , S(KC_7)   , S(KC_8)  , S(KC_9)  , S(KC_0)             ,
-    MT(MOD_LCTL,KC_1)   , KC_2      , KC_3      , KC_4      , KC_5      ,                         KC_6      , KC_7      , KC_8     , KC_9     , KC_0                ,
-    MT(MOD_LSFT,KC_SCLN), KC_EQL    , KC_GRV    , KC_QUOT   , KC_BSLS   ,                         KC_LBRC   , KC_RBRC   , KC_COMM  , KC_DOT   , MT(MOD_RSFT,KC_SLSH) ,
-    KC_LCTL             , KC_LALT   , KC_LGUI   , _______   , _______   , _______   , _______   , _______   ,                                   _______
+    S(KC_1)             , S(KC_2)   , S(KC_3)               , S(KC_4)   , S(KC_5)   ,                         S(KC_6)   , S(KC_7)   , S(KC_8)  , S(KC_9)  , S(KC_0)             ,
+    MT(MOD_LCTL,KC_1)   , KC_2      , MT(MOD_LGUI,KC_3)     , LT(2,KC_4), KC_5      ,                         KC_6      , KC_7      , KC_8     , KC_9     , KC_0                ,
+    MT(MOD_LSFT,KC_SCLN), KC_EQL    , KC_GRV                , KC_QUOT   , KC_BSLS   ,                         KC_LBRC   , KC_RBRC   , KC_COMM  , KC_DOT   , MT(MOD_RSFT,KC_SLSH) ,
+    KC_LCTL             , KC_LALT   , KC_LGUI               , _______   , _______   , _______   , _______   , _______   ,                                   KC_RSFT
   ),
 
   [2] = LAYOUT_right_ball(
-    _______ , KC_BRMD           , KC_BRMU           , _______       , KC_PGUP   ,                         _______   , G(KC_LBRC), KC_MINUS    , G(KC_RBRC)  , KC_ESC    ,
-    _______ , KC_KB_VOLUME_DOWN , KC_KB_VOLUME_UP   , KC_KB_MUTE    , KC_PGDN   ,                         KC_BSPC   , KC_BTN1   , KC_BTN3     , KC_BTN2     , _______   ,
-    _______ , _______           , _______           , _______       , _______   ,                         _______   , KC_ENT    , C(KC_LEFT)  , C(KC_RGHT)  , _______   ,
-    _______ , _______           , _______           , _______       , _______   , _______   , _______   , _______   ,                                         _______
+    _______ , KC_BRMD           , KC_BRMU           , _______       , KC_PGUP   ,                         LCS(KC_TAB) , G(KC_LBRC), A(KC_TAB)  , G(KC_RBRC), C(KC_TAB) ,
+    _______ , KC_KB_VOLUME_DOWN , KC_KB_VOLUME_UP   , KC_KB_MUTE    , KC_PGDN   ,                         KC_BSPC     , KC_BTN1   , KC_BTN3    , KC_BTN2   , KC_PGUP   ,
+    _______ , _______           , _______           , _______       , _______   ,                         KC_DEL      , KC_ENT    , C(KC_LEFT) , C(KC_RGHT), KC_PGDN   ,
+    _______ , _______           , _______           , _______       , _______   , _______   , LCA(KC_TAB) , _______   ,                                      _______
   ),
 
   [3] = LAYOUT_right_ball(
     KC_F1   , KC_F2     , KC_F3     , KC_F4     ,  KC_F5    ,                         KC_F6     , KC_F7     , KC_F8     , KC_F9     , KC_F10    ,
-    RGB_MOD , RGB_HUI   , RGB_SAI   , RGB_VAI   ,  SCRL_DVI ,                         KC_LEFT   , KC_DOWN   , KC_UP     , KC_RGHT   , _______   ,
-    RGB_RMOD, RGB_HUD   , RGB_SAD   , RGB_VAD   ,  SCRL_DVD ,                         _______   , CPI_D100  , CPI_I100  , _______   , KBC_SAVE  ,
-    QK_BOOT , KBC_RST   , _______   , _______   ,  _______  , _______  , _______    , _______   ,                                     QK_BOOT
+    KC_F11  , KC_F12    , RGB_SAI   , RGB_VAI   ,  SCRL_DVI ,                         KC_LEFT   , KC_DOWN   , KC_UP     , KC_RGHT   , _______   ,
+    KC_LSFT , RGB_HUD   , RGB_SAD   , RGB_VAD   ,  SCRL_DVD ,                         _______   , CPI_D100  , CPI_I100  , _______   , KBC_SAVE  ,
+    RGB_TOG , KBC_RST   , _______   , _______   ,  _______  , _______  , _______    , _______   ,                                     QK_BOOT
   )
 };
 // clang-format on
 
-// layer_state_t layer_state_set_user(layer_state_t state) {
-//     switch(get_highest_layer(remove_auto_mouse_layer(state, true))) {
-//         case 2:
-//             // Auto enable scroll mode when the highest layer is 2
-//             // remove_auto_mouse_target must be called to adjust state *before* setting enable
-//             state = remove_auto_mouse_layer(state, false);
-//             set_auto_mouse_enable(false);
-//             keyball_set_scroll_mode(true);
-//             break;
-//         default:
-//             set_auto_mouse_enable(true);
-//             keyball_set_scroll_mode(false);
-//             break;
-//     }
-//     return state;
-// }
 layer_state_t layer_state_set_user(layer_state_t state) {
     // Auto enable scroll mode when the highest layer is 3
     keyball_set_scroll_mode(get_highest_layer(state) == 3);
@@ -84,10 +68,3 @@ void oledkit_render_info_user(void) {
     keyball_oled_render_layerinfo();
 }
 #endif
-
-// #ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
-// void pointing_device_init_user(void) {
-//     set_auto_mouse_layer(2);
-//     set_auto_mouse_enable(true);
-// }
-// #endif
