@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_right_ball(
     _______ , KC_BRMD           , KC_BRMU           , _______       , KC_PGUP   ,                         LCS(KC_TAB) , G(KC_LBRC), A(KC_TAB)  , G(KC_RBRC), C(KC_TAB) ,
-    _______ , KC_KB_VOLUME_DOWN , KC_KB_VOLUME_UP   , KC_KB_MUTE    , KC_PGDN   ,                         KC_BSPC     , KC_BTN1   , KC_BTN3    , KC_BTN2   , KC_PGUP   ,
+    _______ , KC_KB_VOLUME_DOWN , KC_KB_VOLUME_UP   , KC_KB_MUTE    , KC_PGDN   ,                         KC_BSPC     , KC_BTN1   , C(KC_UP)   , KC_BTN2   , KC_PGUP   ,
     _______ , _______           , _______           , _______       , _______   ,                         KC_DEL      , KC_ENT    , C(KC_LEFT) , C(KC_RGHT), KC_PGDN   ,
     _______ , _______           , _______           , _______       , _______   , _______   , LCA(KC_TAB) , _______   ,                                      _______
   ),
